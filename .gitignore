@@ -379,4 +379,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+*.png
+*.svg
+
 # End of https://www.toptal.com/developers/gitignore/api/linux,windows,macos,python,visualstudiocode,pycharm
