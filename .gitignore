@@ -382,4 +382,16 @@ $RECYCLE.BIN/
 *.png
 *.svg
 
+.idea/
+*.iml
+*.iws
+*.eml
+out/
+.DS_Store
+.svn
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
+
 # End of https://www.toptal.com/developers/gitignore/api/linux,windows,macos,python,visualstudiocode,pycharm
