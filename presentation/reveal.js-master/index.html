@@ -27,7 +27,8 @@
 						Dada una función $f:D\subset\mathbb{R}\rightarrow\mathbb{R}$, decimos que un punto $\hat{x}\in D$ es una raíz de $f$ si $f(\hat{x})=0$
 						Queremos diseñar un programa computacional que aproxime las raíces de $f$. 
 						---
-						### Algunas soluciones
+						## Alternativas
+						Usar métodos numéricos:
 						<div class="r-stack">
 							<img
 								class="fragment"
@@ -36,6 +37,48 @@
 								height="400"
 							/>
 						</div>
+						---
+						## ¿Qué es un algoritmo genético?
+						Es un método para resolver problemas basado en la selección natural. Un algoritmo genético va modificando repetidamente una población de individuos hasta aproximarse a la solución.
+						---
+						La población de individuos no es más que un conjunto de posibles soluciones al problema, a las cuales se les aplicarán ciertas operaciones para intentar aproximarse a la solución.
+
+						Un aspecto importante a considerar es la forma en la que se van a representar dichas posibles soluciones en nuestro programa computacional.
+						---
+						Un algoritmo genético tiene los siguientes pasos:
+						1. Inicialización.
+						2. Selección.
+						3. Cruza.
+						4. Mutación.
+						5. Finalización.
+						---
+						## Inicialización
+						Se genera una población inicial (normalmente de forma aleatoria) según un tamaño y la representación previamente elegida.
+						---
+						## Selección.
+						Es un filtro para obtener los mejores individuos de la población, es decir, aquellos que se aproximen a la solución.
+						
+						Una forma de hacerlo es realizar un *torneo 1 vs 1*:
+						---
+						<img
+								src="./torneo.drawio.svg"
+								width="720"
+								height="600"
+						/>
+						---
+						## Cruza.
+						Es el proceso en el que se eligen 2 padres de la población para crear a sus hijos (puede ser un hijo o varios).
+						
+						En términos prácticos, se toman dos individuos para intentar crear nuevos individuos que hereden algunas de sus características. 
+						---
+						## Mutación.
+						Es el proceso en el que se modifican algunos elementos de la población para preservar la diversidad entre los individuos.
+						---
+						## Finalización.
+						Al aplicar los pasos de **selección**, **cruza** y **mutación** obtenemos una *nueva* población a la cual podemos aplicar nuevamente estos pasos.
+						
+						El algoritmo termina cuando aplicamos estos pasos repetidamente hasta alcanzar cierto número de generaciones.
+						
 					</textarea>
 				</section>
 			</div>
