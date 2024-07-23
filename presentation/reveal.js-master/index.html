@@ -12,12 +12,32 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="dist/theme/dracula.css" />
+
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Algoritmo Genético para encontrar raíces de una función $f:\mathbb{R}\rightarrow\mathbb{R}$ 
+						
+						---
+						## Problema
+						Dada una función $f:D\subset\mathbb{R}\rightarrow\mathbb{R}$, decimos que un punto $\hat{x}\in D$ es una raíz de $f$ si $f(\hat{x})=0$
+						Queremos diseñar un programa computacional que aproxime las raíces de $f$. 
+						---
+						### Algunas soluciones
+						<div class="r-stack">
+							<img
+								class="fragment"
+								src="./meme.png"
+								width="550"
+								height="400"
+							/>
+						</div>
+					</textarea>
+				</section>
 			</div>
 		</div>
 
@@ -25,15 +45,16 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
 			});
 		</script>
 	</body>
