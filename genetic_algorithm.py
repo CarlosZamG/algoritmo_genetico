@@ -16,8 +16,7 @@ def selection(population: np.ndarray,
                 function: Callable[[float],float]) -> np.ndarray:
     
     np.random.shuffle(population)
-    # print("Pobla bara")
-    # print(population)
+    
     partition_1: np.ndarray = population[::2]
     partition_2: np.ndarray = population[1::2]
     evaluation_1: np.ndarray = function(partition_1)
@@ -81,14 +80,8 @@ def find_roots(function: Callable[[float],float],
                                 right_endpoint)
     
     for i in range(number_of_generations):
-        # print("Poblacion")
-        # print(population)
         parents_1: np.ndarray = selection(population, abs_function)
-        # print("Padres1")
-        # print(parents_1)
         parents_2: np.ndarray = selection(population, abs_function)
-        # print("Padres2")
-        # print(parents_2)
         all_parents: np.ndarray = np.append(parents_1, parents_2)
         sons: np.ndarray = crossover(all_parents)
         new_sons: np.ndarray = mutation(sons)
