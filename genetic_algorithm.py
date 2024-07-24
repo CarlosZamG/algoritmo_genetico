@@ -86,8 +86,7 @@ def find_roots(function: Callable[[float],float],
         sons: np.ndarray = crossover(all_parents)
         new_sons: np.ndarray = mutation(sons)
         parents_and_sons: np.ndarray = np.append(all_parents, new_sons)
-        population: np.ndarray = selection(parents_and_sons,
-                                            abs_function)
+        population: np.ndarray = selection(parents_and_sons, abs_function)
     
     return population
 
